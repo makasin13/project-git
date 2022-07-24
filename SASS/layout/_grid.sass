@@ -1,0 +1,38 @@
+//настройка колонок
+//начинаем со строк. смотрим ширину строки
+.row
+    max-width: $grid-width
+    background-color: #c893c8
+    margin: 0 auto
+    &:not(:last-child)//всем элементам кроме последнего
+        margin-bottom: $margin-vertical-big
+    display: grid
+    grid-template-columns: repeat(12,minmax(60px,auto))
+    grid-auto-rows: minmax(270px,auto)
+
+.row--6
+    grid-column: span 12
+    display: grid
+.col-1-of-2__2
+    grid-column-start: 2
+
+.row--3
+    grid-column: span 12
+    display: grid
+.col-1-of-3__2
+    grid-column-start: 3
+
+
+.row--4
+    grid-column: span 12
+.row--12
+    grid-column: span 12
+.row--12__2
+    grid-column: span 12
+
+
+
+[class^="col-"]
+    &:not(:last-child)
+        margin-right: $margin-gorizont
+        background-color: #0b1f05
